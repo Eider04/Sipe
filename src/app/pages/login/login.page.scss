@@ -1,0 +1,39 @@
+    .paddinMain {
+        padding: 60px 20px 0px 23px;
+        height: 100%;
+        background-color: #213e6b;
+    }
+    
+    .accion {
+        margin-top: 20px;
+        border-bottom: 1px solid;
+        font-size: 14px;
+        color: white;
+    }
+    
+    .iconBtn {
+        font-size: 32px;
+    }
+    
+    .decoracionInput {
+        border-radius: 30px;
+    }
+    
+    .top12 {
+        margin-top: 12px;
+    }
+    
+    .label-fixed.sc-ion-label-md-h {
+        flex: 0 0 40px !important;
+        width: 100px;
+        min-width: 0px !important;
+        max-width: 200px;
+    }
+    
+    #flexAccion {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }

@@ -1,0 +1,71 @@
+<ion-menu mode='ios' contentId="main-content" type="overlay">
+    <ion-content>
+        <ion-list id="inbox-list">
+
+            <span>
+              <ion-icon slot="icon-only" style="font-size: 100px;" name="person-circle-outline"></ion-icon>
+          </span>
+            <ion-list-header>Sipes</ion-list-header>
+            <ion-note>Prueba@sipes.com.co</ion-note>
+
+        </ion-list>
+
+        <ion-list id="labels-list">
+            <ion-list-header>Opciones</ion-list-header>
+
+            <ion-item detail *ngFor="let item of modulos">
+                <ion-label>
+
+                    <span>
+                         <ion-icon slot="icon-only" [name]="item.icon"></ion-icon>
+                          {{item.descripcion}}
+                       </span>
+                </ion-label>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-menu>
+
+
+<ion-header>
+
+    <ion-toolbar class="toolbarColor" mode='ios' color="primary">
+        <ion-buttons slot="start">
+            <ion-menu-button auto-hide="false"></ion-menu-button>
+        </ion-buttons>
+        <ion-buttons slot="primary">
+            <ion-button (click)="salir()">
+                <ion-icon></ion-icon>
+                <ion-icon slot="icon-only" name="person-circle-outline"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+
+        <ion-title>Sipe</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+
+    <ion-grid class="top40">
+        <ion-row>
+
+            <ion-col size="6" size-md='12' *ngFor="let item of modulos">
+                <ion-item detail (click)="cargarModulo(item)">
+                    <ion-label>
+                        <span>
+                          {{item.descripcion}}
+                       </span>
+                    </ion-label>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
+</ion-content>
+
+<ion-footer class="ion-no-border">
+    <ion-toolbar>
+        <ion-title class="stiloFooter">Sipe - Derechos reservados 2020</ion-title>
+    </ion-toolbar>
+</ion-footer>

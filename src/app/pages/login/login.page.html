@@ -1,0 +1,34 @@
+<ion-content>
+
+    <ion-grid class="paddinMain">
+
+        <ion-row>
+            <div>
+                <img src="assets/recursos/logo.png" alt="">
+            </div>
+        </ion-row>
+        <ion-row class="top40">
+            <form #form="ngForm" (ngSubmit)="logForm(form)">
+                <ion-item class="decoracionInput">
+                    <ion-label position="fixed">
+                        <ion-icon class="iconBtn" name="person-outline"></ion-icon>
+                    </ion-label>
+                    <ion-input type="text" [(ngModel)]="todo. usuario" name="usuario" ngControl="usuario"></ion-input>
+                </ion-item>
+                <ion-item class="decoracionInput top12">
+                    <ion-label position="fixed">
+                        <ion-icon class="iconBtn" name="lock-closed-outline"></ion-icon>
+                    </ion-label>
+                    <ion-input type="password" [(ngModel)]="todo.clave" name="clave" ngControl="clave"></ion-input>
+                </ion-item>
+                <ion-button class="top40" type="submit" shape="round" fill="block">
+                    Iniciar sesion
+                    <ion-icon class="iconBtn" name="log-in-outline" slot="end"></ion-icon>
+                </ion-button>
+            </form>
+            <div id="flexAccion">
+                <ion-label class="accion">Recordar contraseña</ion-label>
+            </div>
+        </ion-row>
+    </ion-grid>
+</ion-content>
